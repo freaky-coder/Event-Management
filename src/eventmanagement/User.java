@@ -11,6 +11,17 @@ package eventmanagement;
  */
 public class User {
 
+    String ID;
+    String name;
+    char gender;
+    long contactNum;
+    String EnrollNum;
+    String eMailID;
+    String collegeID;
+    int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
+    String username;
+    String password;
+    
      public User(String ID, String name, char gender, long contactNum, String EnrollNum, String eMailID, String collegeID, int userType, String username, String password) {
         this.ID = ID;
         this.name = name;
@@ -24,16 +35,6 @@ public class User {
         this.password = password;
     }
      
-    String ID;
-    String name;
-    char gender;
-    long contactNum;
-    String EnrollNum;
-    String eMailID;
-    String collegeID;
-    int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
-    String username;
-    String password;
     
     public String getID() {
         return ID;

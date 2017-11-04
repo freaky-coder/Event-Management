@@ -6,20 +6,16 @@
 package eventmanagement;
 
 /**
+   
  *
  * @author Ayush
  */
-public class Normal {
+public class Normal extends User{
     
-    String Id;
-    String username;
-    String password;
-    
-    public Normal(String Id, String username, String password) 
+    public Normal(String ID, String name, char gender, long contactNum, String EnrollNum, String eMailID, String collegeID, int userType, String username, String password) 
     {
-        this.Id = Id;
-        this.username = username;
-        this.password = password;
+        // Type 0 = Normal
+        super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
    
     public void selectEvent()
