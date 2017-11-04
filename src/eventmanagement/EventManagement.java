@@ -17,16 +17,7 @@ public class EventManagement {
     /**
      * @param args the command line arguments
      */
-        String ID;
-        String name;
-        char gender;
-        long contactNum;
-        int EnrollNum;
-        String eMailID;
-        String collegeID;
-        int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
-        String username;
-        String password;
+       
     public static void main(String[] args) {
         // TODO code application logic here
         int choice;
@@ -40,45 +31,19 @@ public class EventManagement {
         System.out.println("\t Now Manage events at ease");
         System.out.print("\n");
         System.out.println("Tell us what to do....");
-        System.out.println("Register a User Profile (Normal/Volunteer/Admin/Manager)");
-        /*System.out.println("2. Create a Team");
-        System.out.println("3. Create an Event");
-        System.out.println("4. Check Winner of previous event");
-        */
-        //choice= sc.nextInt();
-        //switch(choice)
-        int User_enrol=0;
-        int Type=2;
-       // us=em.createUser(User_enrol);
-       // Type=us.getUserType();
-       // AllUsers.add(us);
-        switch(Type)
+        System.out.println("1. Login to your system");
+        System.out.println("2. Register a User Profile (Normal/Volunteer/Admin/Manager)");
+        System.out.println("3. Create a Team");
+        System.out.println("4. Create an Event");
+        System.out.println("5. Check Winner of previous event");
+        choice= sc.nextInt();
+        switch(choice)
         {
-            case 1: //Normal
+            case 1: 
             {
                 
             }
-            case 2: //Volunteer
-            {
-                
-            }
-            case 3: //Admin
-            {
-                
-            }
-            case 4: //Manager
-            {
-                
-            }
-        }
-        
-        /*
-        {
-            case 1:
-            {
-               em.createUser();                
-            }
-            case 2:
+            case 2: 
             {
                 
             }
@@ -90,7 +55,8 @@ public class EventManagement {
             {
                 
             }
-        }*/
+        }
+        
                 }
     
     public void createUser(int User_enrol)
@@ -110,31 +76,7 @@ public class EventManagement {
               //  return us;
     }
     
-    public void NewUser(int choice,int User_enrol) {
-        
-        //this.ID = ID;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Enter your name:  ");
-        this.name = sc.next();
-        System.out.println("Enter gender: (F)emale/(M)ale/(N)ondisclosed");
-        this.gender = sc.next().charAt(0);
-        System.out.println("Enter your contact number: ");
-        this.contactNum = sc.nextLong();
-        this.EnrollNum = User_enrol;
-        System.out.println("Enter your email Address: ");
-        this.eMailID = sc.next();
-        System.out.println("Enter your College ID:");
-        this.collegeID = sc.next();
-        this.userType = choice;
-        System.out.println("Enter a username:");
-        this.username = sc.next();
-        System.out.println("Enter a password:");
-        this.password = sc.next();
- 
-        //To create unique UserID:
-        this.ID=this.name.substring(1,4)+this.EnrollNum;
-        
-     }
+    
      
     
 }

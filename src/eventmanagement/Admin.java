@@ -16,6 +16,10 @@ public class Admin extends User {
         // Type 3 = Admin
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
+
+    Admin() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
   public void addManager()
   {

@@ -17,6 +17,10 @@ public class Volunteer extends User {
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
 
+    Volunteer() {
+       
+    }
+
  
     
     public void checkParticipant()

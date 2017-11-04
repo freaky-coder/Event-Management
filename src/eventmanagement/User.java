@@ -36,6 +36,10 @@ public class User {
         this.username = username;
         this.password = password;
     }
+
+    User() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
      
     
