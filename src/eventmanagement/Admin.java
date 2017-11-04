@@ -11,7 +11,7 @@ package eventmanagement;
  */
 public class Admin extends User {
 
-  public Admin(String ID, String name, char gender, long contactNum, String EnrollNum, String eMailID, String collegeID, int userType, String username, String password) 
+  public Admin(String ID, String name, char gender, long contactNum, int EnrollNum, String eMailID, String collegeID, int userType, String username, String password) 
     {
         // Type 3 = Admin
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);

@@ -11,7 +11,7 @@ package eventmanagement;
  */
 public class Manager extends User {
     
-   public Manager(String ID, String name, char gender, long contactNum, String EnrollNum, String eMailID, String collegeID, int userType, String username, String password) 
+   public Manager(String ID, String name, char gender, long contactNum, int EnrollNum, String eMailID, String collegeID, int userType, String username, String password) 
     {
         // Type 2 = Manger
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);

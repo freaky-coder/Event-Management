@@ -5,24 +5,26 @@
  */
 package eventmanagement;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Ayush
  */
-abstract public class User {
+public class User {
 
     String ID;
-    private String name;
-    private char gender;
-    private long contactNum;
-    private String EnrollNum;
-    private String eMailID;
-    private String collegeID;
-    private int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
+    String name;
+    char gender;
+    long contactNum;
+    int EnrollNum;
+    String eMailID;
+    String collegeID;
+    int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
     String username;
     String password;
-    
-     public User(String ID, String name, char gender, long contactNum, String EnrollNum, String eMailID, String collegeID, int userType, String username, String password) {
+
+    public User(String ID, String name, char gender, long contactNum, int EnrollNum, String eMailID, String collegeID, int userType, String username, String password) {
         this.ID = ID;
         this.name = name;
         this.gender = gender;
@@ -34,6 +36,7 @@ abstract public class User {
         this.username = username;
         this.password = password;
     }
+    
      
     
     public String getID() {
@@ -52,7 +55,7 @@ abstract public class User {
         return contactNum;
     }
 
-    public String getEnrollNum() {
+    public int getEnrollNum() {
         return EnrollNum;
     }
 
