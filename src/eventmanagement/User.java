@@ -12,13 +12,13 @@ package eventmanagement;
 abstract public class User {
 
     String ID;
-    String name;
-    char gender;
-    long contactNum;
-    String EnrollNum;
-    String eMailID;
-    String collegeID;
-    int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
+    private String name;
+    private char gender;
+    private long contactNum;
+    private String EnrollNum;
+    private String eMailID;
+    private String collegeID;
+    private int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
     String username;
     String password;
     
