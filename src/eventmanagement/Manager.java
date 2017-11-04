@@ -9,16 +9,12 @@ package eventmanagement;
  *
  * @author Ayush
  */
-public class Manager {
+public class Manager extends User {
     
-    String ID;
-    String username;
-    String password;
-
-    public Manager(String ID, String username, String password) {
-        this.ID = ID;
-        this.username = username;
-        this.password = password;
+   public Manager(String ID, String name, char gender, long contactNum, String EnrollNum, String eMailID, String collegeID, int userType, String username, String password) 
+    {
+        // Type 2 = Manger
+        super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
     
 }

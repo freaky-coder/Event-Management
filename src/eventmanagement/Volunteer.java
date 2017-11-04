@@ -9,16 +9,11 @@ package eventmanagement;
  *
  * @author Ayush
  */
-public class Volunteer {
+public class Volunteer extends User {
     
-    String ID;
-    String username;
-    String password;
-    
-    public Volunteer(String ID, String username, String password) {
-        this.ID = ID;
-        this.username = username;
-        this.password = password;
+    public Volunteer(String ID, String name, char gender, long contactNum, String EnrollNum, String eMailID, String collegeID, int userType, String username, String password) 
+    {
+        // Type 1 = Volunteer
+        super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
-  
 }
