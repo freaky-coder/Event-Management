@@ -17,7 +17,7 @@ public class Normal extends User{
         // Type 0 = Normal
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
-   
+
     public void selectEvent()
     {
         

@@ -5,6 +5,8 @@
  */
 package eventmanagement;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Ayush
@@ -17,7 +19,8 @@ public class Event {
        String managerID;
        float amount;
        String eventTypeID;
-
+       
+       ArrayList<Winner> winner = new ArrayList<>();
     public Event(String eventID, String eventName, String department, String managerID, float amount, String eventTypeID) {
         this.eventID = eventID;
         this.eventName = eventName;
