@@ -16,4 +16,25 @@ public class Volunteer extends User {
         // Type 1 = Volunteer
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
+    
+    public void checkParticipant()
+    {
+        
+    }
+    
+    public void getTeamDetail()
+    {
+        
+    }
+    
+    public void updatePayment()
+    {
+        
+    }
+    
+    public void updateWinner()
+    {
+        
+    }
+    
 }

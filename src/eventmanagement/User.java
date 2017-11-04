@@ -9,7 +9,7 @@ package eventmanagement;
  *
  * @author Ayush
  */
-public class User {
+abstract public class User {
 
     String ID;
     String name;

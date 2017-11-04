@@ -22,6 +22,16 @@ public class Normal extends User{
     {
         
     }
+    
+// Mandatory for a normal user to get associated with a team    
+    public void selectTeam()
+    {
         
+    }
+    
+    public boolean Payment()
+    {
+        return false;
+    }
     
 }

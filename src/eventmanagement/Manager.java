@@ -17,4 +17,29 @@ public class Manager extends User {
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
     
+   public void addVounteer()
+   {
+       
+   }
+   
+   public void checkParticipant()
+   {
+       
+   }
+   
+   public void getTeamDetail()
+   {
+       
+   }
+   
+   public void checkWinner()
+   {
+       
+   }
+   
+   public boolean checkPayment()
+   {
+       // Method to check if payment has been processed ot not
+       return false;
+   }
 }

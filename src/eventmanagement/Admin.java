@@ -17,6 +17,21 @@ public class Admin extends User {
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
     
+  public void addManager()
+  {
+      
+  }
     
-    
+  public void addVolunteer()
+  {
+      
+  }
+   
+  public void addEvent()
+  {
+      
+ 
+  }
+  
+  // For checking the participant, payment & to fetch the team details we can use the functions in Manager class
 }
