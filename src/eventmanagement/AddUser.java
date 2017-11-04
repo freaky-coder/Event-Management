@@ -32,13 +32,16 @@ public class AddUser {
         ArrayList<Volunteer> volunteer = new ArrayList<>();
         ArrayList<Manager> manager = new ArrayList<>();
         ArrayList<Admin> admin = new ArrayList<>();
-        User u = new User();
-        Normal normal_temp = new Normal();
-        Volunteer volunteer_temp = new Volunteer();
-        Manager manager_temp = new Manager();
-        Admin admin_temp = new Admin();
         
-        public void AddUsers(int choice,int User_enrol) throws IOException {
+        // Temporary objects for adding respective users in an array list
+        User u = new User();
+      //  Normal normal_temp = new Normal();
+      //  Volunteer volunteer_temp = new Volunteer();
+      //  Manager manager_temp = new Manager();
+      //  Admin admin_temp = new Admin();
+        
+        public void AddUsers(int choice,int User_enrol) throws IOException 
+        {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter your name:  ");
         this.name = br.readLine();
@@ -58,5 +61,14 @@ public class AddUser {
         this.password = br.readLine();
         this.ID=this.name.substring(1,4)+this.EnrollNum;  //To create unique UserID
         
+        u.EnrollNum= EnrollNum;
+        u.ID= ID;
+        u.collegeID = collegeID;
+        u.eMailID = eMailID;
+        u.gender = gender;
+        u.name = name;
+        u.userType = userType;
+        u.username = username;
+        u.password = password;
      }
 }
