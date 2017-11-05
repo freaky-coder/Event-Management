@@ -34,11 +34,11 @@ public class AddUser {
         ArrayList<Admin> admin = new ArrayList<>();
         
         // Temporary objects for adding respective users in an array list
-        User u = new User();
-      //  Normal normal_temp = new Normal();
-      //  Volunteer volunteer_temp = new Volunteer();
-      //  Manager manager_temp = new Manager();
-      //  Admin admin_temp = new Admin();
+        //User u = new User();
+        Normal n_t = new Normal();
+        Volunteer v_t = new Volunteer();
+        Manager m_t = new Manager();
+        Admin a_t = new Admin();
         
         public void AddUsers(int choice,int User_enrol) throws IOException 
         {
@@ -59,8 +59,46 @@ public class AddUser {
         this.username = br.readLine();
         System.out.println("Enter a password:");
         this.password = br.readLine();
-        this.ID=this.name.substring(1,4)+this.EnrollNum;  //To create unique UserID
-        
+        //this.ID=this.name.substring(1,4)+this.EnrollNum;  //To create unique UserID
+        //Depending on the usertype; insert into that object type; either normal, volunteer etc
+        switch(choice)
+        {
+            case 1: 
+            {
+                n_t.ID=ID;
+                n_t.username=username;
+                n_t.password=password;
+                normal.add(n_t);
+            }
+            case 2:
+            {
+                v_t.ID=ID;
+                v_t.username=username;
+                v_t.password=password;
+                volunteer.add(v_t);
+            }    
+            case 3:
+            {
+                this.ID=this.name.substring(1,4)+this.EnrollNum;
+                a_t.username=username;
+                a_t.setCollegeID(collegeID);
+                a_t.setContactNum(contactNum);
+                a_t.setEnrollNum(EnrollNum);
+                a_t.setGender(gender);
+                a_t.seteMailID(eMailID);
+                a_t.setName(name);
+                a_t.password=password;
+                admin.add(a_t);
+            }
+            case 4:
+            {
+                m_t.ID=ID;
+                m_t.username=username;
+                m_t.password=password;
+                manager.add(m_t);
+            }
+        }
+        /*
         u.EnrollNum= EnrollNum;
         u.ID= ID;
         u.collegeID = collegeID;
@@ -70,5 +108,6 @@ public class AddUser {
         u.userType = userType;
         u.username = username;
         u.password = password;
+        */
      }
 }
