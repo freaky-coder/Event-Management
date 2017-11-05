@@ -5,6 +5,9 @@
  */
 package eventmanagement;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /**
  *
  * @author Ayush
@@ -13,5 +16,8 @@ public class Login {
     String username;
     String password;
     int loginType;
+    
+    BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
+    
     
 }
