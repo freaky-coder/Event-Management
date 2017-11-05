@@ -5,22 +5,62 @@
  */
 package eventmanagement;
 
-import java.util.Scanner;
+
 
 /**
  *
  * @author Ayush
  */
-public class User {
+public abstract class User {
 
     String ID;
-    String name;
-    char gender;
-    long contactNum;
-    int EnrollNum;
-    String eMailID;
-    String collegeID;
-    int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
+    private String name;
+    private char gender;
+    private long contactNum;
+    private int EnrollNum;
+    private String eMailID;
+    private String collegeID;
+    private int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public void setContactNum(long contactNum) {
+        this.contactNum = contactNum;
+    }
+
+    public void setEnrollNum(int EnrollNum) {
+        this.EnrollNum = EnrollNum;
+    }
+
+    public void seteMailID(String eMailID) {
+        this.eMailID = eMailID;
+    }
+
+    public void setCollegeID(String collegeID) {
+        this.collegeID = collegeID;
+    }
+
+    public void setUserType(int userType) {
+        this.userType = userType;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
     String username;
     String password;
 
