@@ -18,6 +18,9 @@ public class Login {
     String password;
     int loginType;
     
+    int temp =0;
+    boolean isLogin = false;
+    
     BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
     AddUser au = new AddUser();
     public boolean isValid() throws IOException
@@ -36,19 +39,41 @@ public class Login {
         {
             case 1:
             {
-               
+               temp=au.normal.indexOf(username);
+               if(password==au.normal.get(temp).toString())
+               {
+                   isLogin= true;
+                   System.out.println("Welcome "+username+" !");
+               } 
+            
             }
             case 2:
             {
+                 temp=au.normal.indexOf(username);
+               if(password==au.volunteer.get(temp).toString())
+               {
+                   isLogin= true;
+                   System.out.println("Welcome "+username+" !");
+               } 
                 
             }
             case 3: 
             {
-                
+                 temp=au.normal.indexOf(username);
+               if(password==au.manager.get(temp).toString())
+               {
+                   isLogin= true;
+                   System.out.println("Welcome "+username+" !");
+               } 
             }
             case 4:
             {
-                
+                 temp=au.normal.indexOf(username);
+               if(password==au.admin.get(temp).toString())
+               {
+                   isLogin= true;
+                   System.out.println("Welcome "+username+" !");
+               } 
             }
         }
         return false;
