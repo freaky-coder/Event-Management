@@ -24,6 +24,12 @@ public class Login {
     public boolean isLogin() throws IOException
     {
         if(au.normal.size()==0)
+        {
+            System.out.println("No user database found... Please register to login");
+            return false;            
+        }    
+        else
+        {
         System.out.println("Enter the Username");
         username= obj.readLine();
         System.out.println("Enter the Password");
@@ -40,8 +46,7 @@ public class Login {
             {
                temp=au.normal.indexOf(username);
                if(password==au.normal.get(temp).toString())
-               {
-                   
+               { 
                    System.out.println("Welcome "+username+" !");
                } 
             
@@ -73,6 +78,7 @@ public class Login {
             }
         }
         return false;
+    }
     }
     
 }

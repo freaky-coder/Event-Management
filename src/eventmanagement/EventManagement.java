@@ -22,9 +22,10 @@ public class EventManagement {
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
         int choice;
+        int registeredCount=0;
         int innerChoice;
         boolean loggedIn = false;
-        ArrayList<User> AllUsers=new ArrayList<>();
+       // ArrayList<User> AllUsers=new ArrayList<>();
         EventManagement em = new EventManagement();
        // User us=new User();
         Scanner sc = new Scanner(System.in);
@@ -37,6 +38,7 @@ public class EventManagement {
         System.out.println("3. Create a Team");
         System.out.println("4. Create an Event");
         System.out.println("5. Check Winner of previous event");
+        System.out.println("----------------------------------------");
         choice= sc.nextInt();
         switch(choice)
         {
@@ -47,7 +49,9 @@ public class EventManagement {
             }
             case 2: 
             {
-                
+                registeredCount+=1;
+                em.createUser(registeredCount);
+                System.out.println("Profile Added to Database Successfully!!");
             }
             case 3:
             {
@@ -61,16 +65,19 @@ public class EventManagement {
         
                 }
     
-    public void createUser(int User_enrol)
+    public void createUser(int User_enrol) throws IOException
     {
-                System.out.println("1. Create Normal User"); //Type 0
-                System.out.println("2. Create a Volunteer Profile"); //Type 1
-                System.out.println("3. Create an Admin"); //Type 2
-                System.out.println("4. Create a Manager Profile"); //Type 3
+                System.out.print("\n");
+                System.out.println("Which type of User you are?"); 
+                System.out.println("-----------------------------------------");
+                System.out.println("1. A Normal User"); //Type 0
+                System.out.println("2. A Volunteer"); //Type 1
+                System.out.println("3. An Admin"); //Type 2
+                System.out.println("4. A Manager"); //Type 3
                 int ch;// For user type
                 Scanner sc = new Scanner(System.in);
                 ch=sc.nextInt();
-                User_enrol=User_enrol+1;
-                System.out.println("---Enter your details---");
+                AddUser au = new AddUser();
+                au.AddUsers(ch, User_enrol);
     }    
 }

@@ -9,6 +9,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  *
  * @author Ayush
@@ -24,7 +25,8 @@ public class AddUser {
         int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
         String username;
         String password;
-        
+        Scanner sc = new Scanner(System.in);
+        long temp;
         // ArrayList to store all the data of different kind of users
         ArrayList<Normal> normal = new ArrayList<>();
         ArrayList<Volunteer> volunteer = new ArrayList<>();
@@ -40,16 +42,18 @@ public class AddUser {
         
         public void AddUsers(int choice,int User_enrol) throws IOException 
         {
+        String numInput;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter your name:  ");
         this.name = br.readLine();
         System.out.println("Enter gender: (F)emale/(M)ale/(N)ondisclosed");
         this.gender = (char)br.read();
         System.out.println("Enter your contact number: ");
-        this.contactNum = br.read();
-        this.EnrollNum = User_enrol;
+        temp= sc.nextLong();
+        this.contactNum = temp;
         System.out.println("Enter your email Address: ");
-        this.eMailID = br.readLine();
+        numInput = sc.next();
+        this.eMailID  = numInput;
         System.out.println("Enter your College ID:");
         this.collegeID = br.readLine();
         this.userType = choice;
@@ -59,6 +63,7 @@ public class AddUser {
         this.password = br.readLine();
         //this.ID=this.name.substring(1,4)+this.EnrollNum;  //To create unique UserID
         //Depending on the usertype; insert into that object type; either normal, volunteer etc
+        this.EnrollNum = User_enrol;
         switch(choice)
         {
             case 1: 

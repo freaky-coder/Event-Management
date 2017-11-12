@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class Admin extends User {
 
-   AddUser au = new AddUser();
+   AddUser au;
    Scanner sc = new Scanner(System.in);
    int choice;
   public Admin(String ID, String name, char gender, long contactNum, int EnrollNum, String eMailID, String collegeID, int userType, String username, String password) 
