@@ -74,9 +74,5 @@ public class EventManagement {
                 //us.NewUser(ch,User_enrol);
                 
               //  return us;
-    }
-    
-    
-     
-    
+    }    
 }

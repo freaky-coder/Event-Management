@@ -9,8 +9,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-
-
 /**
  *
  * @author Ayush
@@ -98,16 +96,5 @@ public class AddUser {
                 manager.add(m_t);
             }
         }
-        /*
-        u.EnrollNum= EnrollNum;
-        u.ID= ID;
-        u.collegeID = collegeID;
-        u.eMailID = eMailID;
-        u.gender = gender;
-        u.name = name;
-        u.userType = userType;
-        u.username = username;
-        u.password = password;
-        */
-     }
+        }
 }
