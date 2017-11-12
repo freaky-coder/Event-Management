@@ -55,7 +55,12 @@ public class EventManagement {
             }
             case 3:
             {
-                
+                if(loggedIn==true)
+                {
+                    
+                }
+                else
+                    System.out.println("You cannot do any modifications without logging in. Please log in and try again");
             }
             case 4:
             {
