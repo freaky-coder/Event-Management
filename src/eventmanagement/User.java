@@ -77,12 +77,8 @@ public abstract class User {
         this.password = password;
     }
 
-    User() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-     
-    
+    User(){}
+       
     public String getID() {
         return ID;
     }

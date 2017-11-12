@@ -5,6 +5,7 @@
  */
 package eventmanagement;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -18,11 +19,11 @@ public class EventManagement {
      * @param args the command line arguments
      */
        
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // TODO code application logic here
         int choice;
         int innerChoice;
-        
+        boolean loggedIn = false;
         ArrayList<User> AllUsers=new ArrayList<>();
         EventManagement em = new EventManagement();
        // User us=new User();
@@ -41,7 +42,8 @@ public class EventManagement {
         {
             case 1: 
             {
-                
+                Login login = new Login();
+                loggedIn= login.isLogin();
             }
             case 2: 
             {
@@ -70,9 +72,5 @@ public class EventManagement {
                 ch=sc.nextInt();
                 User_enrol=User_enrol+1;
                 System.out.println("---Enter your details---");
-                //User us=new User();
-                //us.NewUser(ch,User_enrol);
-                
-              //  return us;
     }    
 }

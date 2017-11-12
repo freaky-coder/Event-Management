@@ -17,9 +17,7 @@ public class Manager extends User {
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
 
-    Manager() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    Manager(){}
     
    public void addVounteer()
    {

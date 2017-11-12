@@ -17,14 +17,13 @@ public class Login {
     String username;
     String password;
     int loginType;
-    
     int temp =0;
-   
-    
+      
     BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
     AddUser au = new AddUser();
-    public boolean isValid() throws IOException
+    public boolean isLogin() throws IOException
     {
+        if(au.normal.size()==0)
         System.out.println("Enter the Username");
         username= obj.readLine();
         System.out.println("Enter the Password");

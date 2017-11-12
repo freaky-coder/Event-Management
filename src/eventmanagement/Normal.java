@@ -18,9 +18,7 @@ public class Normal extends User{
         super(ID,name,gender,contactNum,EnrollNum,eMailID,collegeID,userType,username,password);
     }
 
-    Normal() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    Normal() {}
 
     public void selectEvent()
     {
