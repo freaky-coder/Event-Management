@@ -5,6 +5,8 @@
  */
 package eventmanagement;
 
+import java.util.ArrayList;
+
 
 
 /**
@@ -21,7 +23,9 @@ public abstract class User {
     private String eMailID;
     private String collegeID;
     private int userType; // Type 0 = Normal, Type 1 = Volunteer, Type 2 = Manager, Type 3 = Admin
-
+    
+    ArrayList<Event> e = new ArrayList<>();
+    
     public void setID(String ID) {
         this.ID = ID;
     }
