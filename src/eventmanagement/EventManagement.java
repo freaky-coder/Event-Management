@@ -55,12 +55,14 @@ public class EventManagement {
                 Login login = new Login();
                 loggedIn= login.isLogin();
                 System.out.println("Check");
+                break;
             }
             case 2: 
             {
                 registeredCount+=1;
                 em.createUser(registeredCount);
                 System.out.println("Profile Added to Database Successfully!!");
+                break;
             }
             case 3:
             {
@@ -70,10 +72,11 @@ public class EventManagement {
                 }
                 else
                     System.out.println("You cannot do any modifications without logging in. Please log in and try again");
+            break;
             }
             case 4:
             {
-                
+            break;    
             }
             
         }
@@ -97,5 +100,7 @@ public class EventManagement {
                 ch=sc.nextInt();
                 AddUser au = new AddUser();
                 au.AddUsers(ch, User_enrol);
+                System.out.println("choice="+ch);
+                
     }    
 }

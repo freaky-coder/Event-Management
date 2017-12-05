@@ -42,6 +42,7 @@ public class AddUser {
         
         public void AddUsers(int choice,int User_enrol) throws IOException 
         {
+           
         String numInput;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter your name:  ");
@@ -55,7 +56,8 @@ public class AddUser {
         numInput = sc.next();
         this.eMailID  = numInput;
         System.out.println("Enter your College ID:");
-        this.collegeID = br.readLine();
+        numInput = br.readLine();
+        this.eMailID  = numInput;
         this.userType = choice;
         System.out.println("Enter a username:");
         this.username = br.readLine();
@@ -68,21 +70,39 @@ public class AddUser {
         {
             case 1: 
             {
-                n_t.ID=ID;
+                
+                n_t.ID="nor"+this.name.substring(0,3)+this.EnrollNum;
                 n_t.username=username;
+                n_t.setCollegeID(collegeID);
+                n_t.setContactNum(contactNum);
+                n_t.setEnrollNum(EnrollNum);
+                n_t.setGender(gender);
+                n_t.seteMailID(eMailID);
+                n_t.setName(name);
                 n_t.password=password;
                 normal.add(n_t);
+                System.out.println("Your user generated ID is: "+n_t.ID);
+                break;
             }
             case 2:
             {
-                v_t.ID=ID;
+                v_t.ID="vol"+this.name.substring(0,3)+this.EnrollNum;
                 v_t.username=username;
+                v_t.setCollegeID(collegeID);
+                v_t.setContactNum(contactNum);
+                v_t.setEnrollNum(EnrollNum);
+                v_t.setGender(gender);
+                v_t.seteMailID(eMailID);
+                v_t.setName(name);
                 v_t.password=password;
                 volunteer.add(v_t);
+            
+                System.out.println("Your user generated ID is: "+v_t.ID);
+                break;
             }    
             case 3:
             {
-                this.ID=this.name.substring(1,4)+this.EnrollNum;
+                a_t.ID="ad"+this.name.substring(0,3)+this.EnrollNum;
                 a_t.username=username;
                 a_t.setCollegeID(collegeID);
                 a_t.setContactNum(contactNum);
@@ -92,13 +112,24 @@ public class AddUser {
                 a_t.setName(name);
                 a_t.password=password;
                 admin.add(a_t);
+            
+                System.out.println("Your user generated ID is: "+a_t.ID);
+                break;
             }
             case 4:
             {
-                m_t.ID=ID;
+                m_t.ID="man"+this.name.substring(0,3)+this.EnrollNum;
                 m_t.username=username;
+                m_t.setCollegeID(collegeID);
+                m_t.setContactNum(contactNum);
+                m_t.setEnrollNum(EnrollNum);
+                m_t.setGender(gender);
+                m_t.seteMailID(eMailID);
+                m_t.setName(name);
                 m_t.password=password;
                 manager.add(m_t);
+                System.out.println("Your user generated ID is: "+m_t.ID);
+                break;
             }
         }
         }
