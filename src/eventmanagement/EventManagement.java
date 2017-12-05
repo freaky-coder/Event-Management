@@ -5,7 +5,9 @@
  */
 package eventmanagement;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,6 +34,12 @@ public class EventManagement {
         System.out.println("*****Welcome to Event Management portal*****");
         System.out.println("\t Now Manage events at ease");
         System.out.print("\n");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        
+        char temp= 'y';
+        
+        while(temp!='n')
+        {
         System.out.println("Tell us what to do....");
         System.out.println("1. Login to your system");
         System.out.println("2. Register a User Profile (Normal/Volunteer/Admin/Manager)");
@@ -46,6 +54,7 @@ public class EventManagement {
             {
                 Login login = new Login();
                 loggedIn= login.isLogin();
+                System.out.println("Check");
             }
             case 2: 
             {
@@ -66,9 +75,13 @@ public class EventManagement {
             {
                 
             }
+            
         }
+        System.out.println("Do you want to continue? (y/n)");
+        temp= (char)br.read();
         
                 }
+    }
     
     public void createUser(int User_enrol) throws IOException
     {
