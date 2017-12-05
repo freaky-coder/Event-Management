@@ -56,7 +56,7 @@ public class EventManagement {
             {
                 Login login = new Login();
                 loggedIn= login.isLogin(au);
-                System.out.println("Check");
+                //System.out.println("Check");
                 break;
             }
             case 2: 

@@ -43,7 +43,7 @@ public class AddUser {
         public void AddUsers(int choice,int User_enrol) throws IOException 
         {
            
-        String numInput;
+        String numInput,tempcollege,tempuser,temppass;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Enter your name:  ");
         this.name = br.readLine();
@@ -56,13 +56,16 @@ public class AddUser {
         numInput = sc.next();
         this.eMailID  = numInput;
         System.out.println("Enter your College ID:");
-        numInput = br.readLine();
-        this.eMailID  = numInput;
+        tempcollege = sc.next();
+        this.collegeID  = tempcollege;
         this.userType = choice;
         System.out.println("Enter a username:");
-        this.username = br.readLine();
+        //this.username = br.readLine();
+        tempuser=sc.next();
+        this.username=tempuser;
         System.out.println("Enter a password:");
-        this.password = br.readLine();
+        temppass = sc.next();
+        this.password=temppass;
         //this.ID=this.name.substring(1,4)+this.EnrollNum;  //To create unique UserID
         //Depending on the usertype; insert into that object type; either normal, volunteer etc
         this.EnrollNum = User_enrol;
