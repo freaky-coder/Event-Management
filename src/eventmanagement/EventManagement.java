@@ -20,9 +20,11 @@ public class EventManagement {
     /**
      * @param args the command line arguments
      */
-       
+                
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
+        AddUser au = new AddUser();
+
         int choice;
         int registeredCount=0;
         int innerChoice;
@@ -53,14 +55,14 @@ public class EventManagement {
             case 1: 
             {
                 Login login = new Login();
-                loggedIn= login.isLogin();
+                loggedIn= login.isLogin(au);
                 System.out.println("Check");
                 break;
             }
             case 2: 
             {
                 registeredCount+=1;
-                em.createUser(registeredCount);
+                em.createUser(registeredCount,au);
                 System.out.println("Profile Added to Database Successfully!!");
                 break;
             }
@@ -86,7 +88,7 @@ public class EventManagement {
                 }
     }
     
-    public void createUser(int User_enrol) throws IOException
+    public void createUser(int User_enrol, AddUser au) throws IOException
     {
                 System.out.print("\n");
                 System.out.println("Which type of User you are?"); 
@@ -98,7 +100,7 @@ public class EventManagement {
                 int ch;// For user type
                 Scanner sc = new Scanner(System.in);
                 ch=sc.nextInt();
-                AddUser au = new AddUser();
+                //AddUser au = new AddUser();
                 au.AddUsers(ch, User_enrol);
                 System.out.println("choice="+ch);
                 

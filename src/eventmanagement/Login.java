@@ -20,10 +20,10 @@ public class Login {
     int temp =0;
       
     BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
-    AddUser au = new AddUser();
-    public boolean isLogin() throws IOException
+    //AddUser au = new AddUser();
+    public boolean isLogin(AddUser au) throws IOException
     {
-        if(au.normal.size()==0)
+        if(au.normal.isEmpty())
         {
             System.out.println("No user database found... Please register to login");
             return false;            
