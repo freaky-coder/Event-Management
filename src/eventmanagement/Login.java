@@ -18,6 +18,7 @@ public class Login {
     String username;
     String password;
     int loginType;
+    UserTypeMenu menu_obj;
     int temp =0;
     Scanner sc=new Scanner(System.in);
     BufferedReader obj = new BufferedReader(new InputStreamReader(System.in));
@@ -53,6 +54,8 @@ public class Login {
                    {    if(norm.password.equals(password))
                        {
                         System.out.println("Welcome "+username+" !");
+                        menu_obj.normalMenu();
+                       
                        }
                    else 
                        System.out.println("Wrong password entered");
